@@ -183,11 +183,12 @@ def user_stats(df):
     print('-'*40)
 
 def trip_data(df):
-	"""Displays trip data on bikeshare users"""
+	"""Displays trip row data on bikeshare users"""
 	i = 0
 	show_count = 5
 	trip_data = input('Would you like to view individual trip data? Enter yes or no.\n')
 	while True:
+        #check if the df in the final rows
 		if i > len(df.index):
 			print(df.iloc[i - show_count - len(df.index): 0])
 			print('no more data')
